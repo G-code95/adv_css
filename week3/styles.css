@@ -1,0 +1,29 @@
+body {
+  background-color: #F8A93A;
+}
+
+#contactform {
+  background-color: #F8A93A;
+}
+#contactform input,
+#contactform textarea {
+  background-color: white;
+  flex: 2;
+}
+@media (max-width: 50rem) {
+  #contactform {
+    width: 100%;
+  }
+}
+@media (max-width: 35rem) {
+  #contactform {
+    width: 100%;
+  }
+}
+@media (max-width: 20rem) {
+  #contactform {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
