@@ -1,41 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 
-body {
-  font-size: 16px;
-  font-family: Helvetica, Arial, sans-serif;
-  margin: 0;
-}
+//color variables
+$blue: #6495ed;
+$cream: #faebd7;
+$beige: #deb887;
 
-h1,
-h2 {
-  font-family: "Lora", serif;
-}
+//fonts variables
+$body-font: Helvetica, Arial, sans-serif;
+$header-font: "Lora", serif;
 
-div {
-  display: block;
+//mixins
+@mixin center {
+  width: 90%;
   margin: auto;
 }
 
-/*NAVIGATION*/
+//Body Variables
+body {
+  font-size: 16px;
+  font-family: $body-font;
+  margin: 0;
+
+  div {
+    display: block;
+    margin: auto;
+  }
+
+  h1, h2 {
+  font-family: $header-font;
+  }
+}
+
+//Navigation
 header {
-  background-color: #6495ed;
+  background-color: $blue;
   padding: 2rem;
   margin: 0;
   text-align: end;
-}
 
-h1 {
-  color: #faebd7;
-}
+  h1 {
+    color: $cream;
+  }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  padding-top: 0.75rem;
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+    nav ul li {
+      padding-top: 0.75rem;
+    }
+  }
 }
 
 /*LINKS*/
@@ -43,33 +58,34 @@ a {
   text-decoration: none;
 }
 a:active {
-  color: #deb887;
+  color: $beige;
 }
-
-header a:link,
-header a:visited {
-  color: #faebd7;
-}
-header a:hover {
-  color: white;
+a:hover {
   text-decoration: underline;
 }
 
-h2 a:link,
-h2 a:visited {
-  color: black;
-}
-h2 a:hover {
-  color: #6495ed;
-  text-decoration: underline;
+header {
+  a:link, a:visited {
+    color: $cream;
+  }
+  a:hover {
+    color: white;
+  }
 }
 
-p a:link,
-p a:visited {
-  color: #6495ed;
+h2 {
+  a:link, a:visited {
+    color: black;
+  }
+  a:hover {
+    color: $blue;
+  }
 }
-p a:hover {
-  text-decoration: underline;
+
+p {
+  a:link, a:visited {
+    color: $blue;
+  }
 }
 
 /*MAIN CONTENT*/
@@ -78,7 +94,7 @@ div.post-date {
 }
 
 main {
-  background-color: #faebd7;
+  background-color: $cream;
   width: 100%;
   padding: 1px;
   margin: 0;
@@ -94,9 +110,8 @@ article {
 
 figure img {
   display: flex;
-  width: 90%;
-  margin: auto;
   padding-top: 2rem;
+  @include center;
 }
 
 /*LARGE DISPLAY*/
